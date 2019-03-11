@@ -1,0 +1,22 @@
+{
+  "name": "sgfs-api",
+  "version": "1.0.0",
+  "description": "SGFS interns api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "make test"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "gk",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^2.2.33",
+    "nodemon": "^1.18.10",
+    "uuid": "^3.3.2"
+  }
+}
