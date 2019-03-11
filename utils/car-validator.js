@@ -35,7 +35,7 @@ module.exports = {
     },
 
     validateEdit: function (car) {
-        var carValidation = this.validateCar(car)
+        var carValidation = this.validate(car)
 
         if (carValidation === 'Car is valid.') {
             var id = car.id
