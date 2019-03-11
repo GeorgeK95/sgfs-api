@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
 }));
 
-routes(app).listen(3000, () => Logger.log('Server running on port 3000'))
+routes(app).listen(process.env.PORT || 3000, () => Logger.log('Server running on port 3000'))
 
 /*
 initializeDatabases().then(db => {
