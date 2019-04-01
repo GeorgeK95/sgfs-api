@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red63\green63\blue63;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c31373\c31373\c31373;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+2. Student system app\
+Provides functionality for teachers to record student grades in the system.\
+Objects:\
+- Student: \{firstName, lastName, facNum, grades\}\
+- Grade: \{subject, mark\}\
+\
+Design:\
+The design of the app doesn\'92t have to be pixel-perfect and is on your choice. However, appropriate and user friendly design should be used.\
+\
+Screens:\
+- Screen #1: List all students sorted by grade in ascending/descending order\
+- Screen #2: Enter student grade in the system screen\
+- Screen #3a: Student details screen: should have functionality to edit/delete student from the system\
+\
+Bonus: user registration and login screen\
+- Screen #3b: Teacher should be able to leave opinion about student on the details screen\
+- Implement user registration and login functionality and allow only logged in teachers to do crud operations in the student system.\
+Note: API will be ready on 12.03 for bonus tasks so feel free to start with the required ones.\
+\
+Api endpoints and examples:\
+GET \cf2 \cb3 \expnd0\expndtw0\kerning0
+POST https://sgfs-api.herokuapp.com/v1/students\
+Api will return all registered students in the system.\
+\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+POST https://sgfs-api.herokuapp.com/v1/student\
+\{\
+    "firstName": "Ivan",\
+    "lastName": "Peshov",\
+    "facNumber": "365163",\
+    "imgUrl": "https://s16815.pcdn.co/wp-content/uploads/2017/06/iStock-609683672-studying.jpg",\
+    "grades": [\
+        \{\
+            "subject": "Math",\
+            "mark": 6\
+        \},\
+        \{\
+            "subject": "Bel",\
+            "mark": 5\
+        \},\
+        \{\
+            "subject": "Scienc",\
+            "mark": 6\
+        \}\
+    ]\
+\}\
+Api will return the newly created object with db id.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf2 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0 \cf2 PUT https://sgfs-api.herokuapp.com/v1/student\
+\{\
+    "imgUrl": "https://s16815.pcdn.co/wp-content/uploads/2017/06/iStock-609683672-studying.jpg",\
+    "firstName": \'93Katya\'94,\
+    "lastName": \'93Ivanova\'94,\
+    "facNumber": "365163",\
+    "grades": [\
+        \{\
+            "subject": "Math",\
+            "mark": 6\
+        \},\
+        \{\
+            "subject": "Be1l",\
+            "mark": 4\
+        \},\
+        \{\
+            "subject": "Chemistry",\
+            "mark": 4\
+        \}\
+    ],\
+    "id": "a182c860-439d-11e9-96dc-a3ab3153ee70"\
+\}\
+Api will return the newly edited object with db id.\
+\
+DELETE https://sgfs-api.herokuapp.com/v1/car\
+\{\
+      "id": "a182c860-439d-11e9-96dc-a3ab3153ee70"\
+\}\
+Api will return the newly deleted id.}

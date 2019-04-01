@@ -10,6 +10,10 @@ var emailsDb = require('../db/email-memory')
 
 module.exports = function (app) {
 
+    app.get("/", (req, res, next) => {
+        res.status(200).send()
+    })
+
     app.get("/v1/cars", (req, res, next) => {
         res.status(200).send(carsDb.all())
     })
